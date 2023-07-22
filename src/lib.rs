@@ -62,7 +62,7 @@
 //! IO system is already unusable.  More importantly on many platforms these
 //! do not run properly.  For instance on macOS destructors do not run when
 //! thread local storage is in use.  If you do want to use something like this
-//! you can do something like invoke `libc::at_exit` from within a `#[ctor]`
+//! you can do something like invoke `libc::atexit` from within a `#[ctor]`
 //! function.
 use proc_macro::{Delimiter, Group, Ident, Literal, Punct, Spacing, Span, TokenStream, TokenTree};
 
