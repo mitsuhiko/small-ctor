@@ -209,9 +209,9 @@ pub fn ctor(args: TokenStream, input: TokenStream) -> TokenStream {
                 TokenTree::Group(Group::new(
                     Delimiter::Parenthesis,
                     tokens![
-                        TokenTree::Ident(Ident::new("target_os", Span::call_site())),
+                        TokenTree::Ident(Ident::new("target_vendor", Span::call_site())),
                         TokenTree::Punct(Punct::new('=', Spacing::Alone)),
-                        TokenTree::Literal(Literal::string("macos")),
+                        TokenTree::Literal(Literal::string("apple")),
                         TokenTree::Punct(Punct::new(',', Spacing::Alone)),
                         TokenTree::Ident(Ident::new("link_section", Span::call_site())),
                         TokenTree::Punct(Punct::new('=', Spacing::Alone)),
